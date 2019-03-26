@@ -1,0 +1,30 @@
+{
+  "name": "@weplanter/with-env",
+  "version": "1.0.5",
+  "description": "一个 npm 命令行工具包，帮助你在执行npm/yarn命令时，根据不同参数可带上不同的环境变量",
+  "main": "index.js",
+  "bin": {
+    "with-env": "index.js"
+  },
+  "engines": {
+    "node": ">=5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weplanter/with-env.git"
+  },
+  "author": "zrainma@sina.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weplanter/with-env/issues"
+  },
+  "homepage": "https://github.com/weplanter/with-env#readme",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "cross-env": "^5.2.0",
+    "npm-run-script": "^0.0.4"
+  }
+}
