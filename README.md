@@ -4,10 +4,16 @@
 
 ## 使用方式
 
-```
-  yarn add @weplanter/with-env --dev
-```
+### 安装
+
+#### 使用 yarn
 
 ```
-  npm install @weplanter/with-env --save-dev
+      yarn add @weplanter/with-env --dev
+```
+
+#### 使用 npm
+
+```
+      npm install @weplanter/with-env --save-dev
 ```
