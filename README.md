@@ -6,21 +6,23 @@
 
 ### 安装
 
-#### 使用 yarn
+#### yarn
 
 ```
     yarn add @weplanter/with-env --dev
 ```
 
-#### 使用 npm
+#### npm
 
 ```
     npm install @weplanter/with-env --save-dev
 ```
 
-#### create-react-app 举例
+#### 使用
 
-默认 create-react-app 创建出来的 package.json 中 scripts 如下
+以 create-react-app 创建的项目举例
+
+项目目录下 package.json 中 scripts 如下
 
 ```
     "scripts": {
@@ -43,8 +45,12 @@
     },
 ```
 
-使用
+执行
 
 ```
-    yarn start dev
+    yarn start dev          // process.env.NODE_ENV = 'development'
+    yarn start dev test     // process.env.NODE_ENV = 'test'
+    yarn start dev pre      // process.env.NODE_ENV = 'pre-production'
+    yarn start dev pro      // process.env.NODE_ENV = 'production'
 ```
+
