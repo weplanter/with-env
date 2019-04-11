@@ -9,11 +9,11 @@
 #### 使用 yarn
 
 ```
-      yarn add @weplanter/with-env --dev
+    yarn add @weplanter/with-env --dev
 ```
 
 #### 使用 npm
 
 ```
-      npm install @weplanter/with-env --save-dev
+    npm install @weplanter/with-env --save-dev
 ```
