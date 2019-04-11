@@ -24,7 +24,7 @@
 
 项目目录下 package.json 中 scripts 如下
 
-```
+```json
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
@@ -35,7 +35,7 @@
 
 使用 with-env 修改如下
 
-```
+```json
     "scripts": {
         "start": "with-env",
         "dev": "react-scripts start",
@@ -65,7 +65,7 @@
 
 #### 配合 webpack.DefinePlugin 使用，在项目文件中使用对应的变量
 
-```
+```javascript
     new webpack.DefinePlugin({
         '__DEV__': process.env.NODE_ENV === 'development',
         '__TEST__': process.env.NODE_ENV === 'test',
@@ -76,7 +76,7 @@
 
 场景示例
 
-```
+```javascript
     let requestPrefix = '';
     if(__DEV__){
         requestPrefix = 'http://some-dev-request-prefix'
