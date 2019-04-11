@@ -81,7 +81,7 @@ export default {
         new webpack.DefinePlugin({
             '__DEV__': process.env.NODE_ENV === 'development',
             '__TEST__': process.env.NODE_ENV === 'test',
-            '__PRE_PRO__': process.env.NODE_ENV ==== 'pre-production',
+            '__PRE_PRO__': process.env.NODE_ENV === 'pre-production',
             '__PRO__': process.env.NODE_ENV === 'production'
         }),
     ] 
