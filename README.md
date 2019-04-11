@@ -24,7 +24,7 @@
 
 项目目录下 package.json 中 scripts 如下
 
-```json
+```javascript
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
@@ -35,7 +35,7 @@
 
 使用 with-env 修改如下
 
-```json
+```javascript
     "scripts": {
         "start": "with-env",
         "dev": "react-scripts start",
@@ -47,7 +47,7 @@
 
 执行
 
-```
+```javascript
     // yarn start [其他scripts定义的命令名称] [环境名称, 默认为 dev]
     
     yarn start dev              // process.env.NODE_ENV = 'development'
@@ -63,15 +63,23 @@
 ```
 
 
-#### 配合 webpack.DefinePlugin 使用，在项目文件中使用对应的变量
+#### 配合 webpack 插件 webpack.DefinePlugin 使用，在项目文件中使用对应的变量
 
 ```javascript
-    new webpack.DefinePlugin({
-        '__DEV__': process.env.NODE_ENV === 'development',
-        '__TEST__': process.env.NODE_ENV === 'test',
-        '__PRE_PRO__': process.env.NODE_ENV ==== 'pre-production',
-        '__PRO__': process.env.NODE_ENV = 'production'
-    }),
+    const webpack = require('webpack');
+    
+    export default {
+        ...otherWebpackConfig,
+        plugins: [
+            new webpack.DefinePlugin({
+                '__DEV__': process.env.NODE_ENV === 'development',
+                '__TEST__': process.env.NODE_ENV === 'test',
+                '__PRE_PRO__': process.env.NODE_ENV ==== 'pre-production',
+                '__PRO__': process.env.NODE_ENV === 'production'
+            }),
+        ] 
+    }
+    
 ```
 
 场景示例
