@@ -8,13 +8,13 @@
 
 #### yarn
 
-```shell
+```javascript
     yarn add @weplanter/with-env --dev
 ```
 
 #### npm
 
-```shell
+```javascript
     npm install @weplanter/with-env --save-dev
 ```
 
@@ -30,7 +30,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
-    },
+    }
 ```
 
 使用 with-env 修改如下
@@ -42,7 +42,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
-    },
+    }
 ```
 
 执行
