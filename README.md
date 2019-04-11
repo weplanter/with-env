@@ -8,13 +8,13 @@
 
 #### yarn
 
-```
+```shell
     yarn add @weplanter/with-env --dev
 ```
 
 #### npm
 
-```
+```shell
     npm install @weplanter/with-env --save-dev
 ```
 
@@ -78,6 +78,7 @@
 
 ```javascript
     let requestPrefix = '';
+    
     if(__DEV__){
         requestPrefix = 'http://some-dev-request-prefix'
     }
