@@ -48,9 +48,22 @@
 执行
 
 ```
+    // yarn start [其他scripts定义的命令名称] [环境名称, 默认为 dev]
+    
     yarn start dev          // process.env.NODE_ENV = 'development'
     yarn start dev test     // process.env.NODE_ENV = 'test'
     yarn start dev pre      // process.env.NODE_ENV = 'pre-production'
     yarn start dev pro      // process.env.NODE_ENV = 'production'
+    
+    yarn start build          // process.env.NODE_ENV = 'development'
+    yarn start build test     // process.env.NODE_ENV = 'test'
+    yarn start build pre      // process.env.NODE_ENV = 'pre-production'
+    yarn start build pro      // process.env.NODE_ENV = 'production'
+    
 ```
+
+
+#### .withenvrc.js / .withenvrc 配置
+
+Todo...
 
