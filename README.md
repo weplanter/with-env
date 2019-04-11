@@ -63,6 +63,42 @@
 ```
 
 
+#### 配合 webpack.DefinePlugin 使用，在项目文件中使用对应的变量
+
+```
+    new webpack.DefinePlugin({
+        '__DEV__': process.env.NODE_ENV === 'development',
+        '__TEST__': process.env.NODE_ENV === 'test',
+        '__PRE_PRO__': process.env.NODE_ENV ==== 'pre-production',
+        '__PRO__': process.env.NODE_ENV = 'production'
+    }),
+```
+
+场景示例
+
+```
+    let requestPrefix = '';
+    if(__DEV__){
+        requestPrefix = 'http://some-dev-request-prefix'
+    }
+    if(__TEST__){
+        requestPrefix = 'http://some-test-request-prefix'
+    }
+    if(__PRE_PRO__){
+        requestPrefix = 'http://some-pre-production-request-prefix'
+    }
+    if(__PRO__){
+        requestPrefix = 'http://some-production-request-prefix'
+    }
+    
+    const USER_INFO = `${requestPrefix}/users/:user_id`;
+    
+    fetch(USER_INFO).then(function(response) {
+        // do something
+    })
+```
+
+
 #### .withenvrc.js / .withenvrc 配置
 
 Todo...
