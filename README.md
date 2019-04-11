@@ -8,13 +8,13 @@
 
 #### yarn
 
-```javascript
+```shell
     yarn add @weplanter/with-env --dev
 ```
 
 #### npm
 
-```javascript
+```shell
     npm install @weplanter/with-env --save-dev
 ```
 
