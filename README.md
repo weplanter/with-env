@@ -9,7 +9,7 @@
 // package.json
 
 scripts: {
-    'dev': 'webpack webpack.dev.config.js'
+    'dev': 'webpack --config webpack.dev.config.js'
 }
     
 ```
@@ -31,8 +31,8 @@ yarn dev
 // package.json
 
 scripts: {
-    'dev': 'webpack webpack.dev.config.js',
-    'dev:pro': 'webpack webpack.pro.config.js',
+    'dev': 'webpack --config webpack.dev.config.js',
+    'dev:pro': 'webpack --config webpack.pro.config.js',
 }
     
 ```
