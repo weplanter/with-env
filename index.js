@@ -9,7 +9,7 @@ const fs = require('fs');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 const packageJson = resolveApp('package.json');
-// const withEnvJson = resolveApp('.with-env.config.json');
+const withEnvJson = resolveApp('.withenvrc.json') || resolveApp('.withenvrc.js') || resolveApp('.withenvrc');
 
 const envMapper = {
     'dev': 'development',
@@ -44,7 +44,8 @@ function trimSpace(str) {
 }
 
 function getRunScript(environment, oldScript) {
-    const crossEnvScript = `cross-env-shell NODE_ENV=${environment}`;
+    const { key = 'NODE_ENV'} = withEnvJson;
+    const crossEnvScript = `cross-env-shell ${key}=${environment}`;
     return `${crossEnvScript} "${oldScript}"`;
 }
 
@@ -53,7 +54,7 @@ function getRunScript(environment, oldScript) {
 // output help information on unknown commands
 program
     .arguments('<command> [env] [options]')
-    .action((command, env) => {
+    .action((command, env = 'dev') => {
         const packageConfig = isFileExist(packageJson) ? require(packageJson) : {};
         const {
             scripts = {}
