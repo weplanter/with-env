@@ -147,7 +147,7 @@ package.json 中的 scripts 对象如下：
 
 ```javascript
 
-// yarn we [scripts命令] [环境名称]
+// yarn start [scripts命令] [环境名称]
 
 yarn start dev          // process.env.NODE_ENV = 'development'
 yarn start dev test     // process.env.NODE_ENV = 'test'
